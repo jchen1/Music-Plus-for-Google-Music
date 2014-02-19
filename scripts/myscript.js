@@ -418,6 +418,12 @@ function playback_action(type, callback) {
 	else if (type == 'currently_playing') {
 		$button = $('button[data-id="play-pause"]');
 	}
+	else if (type == 'thumbUp') {
+		$button = $('li[title="Thumbs up"]');
+	}
+	else if (type == 'thumbDown') {
+		$button = $('li[title="Thumbs down"]');
+	}
 	if ($('button[data-id="play-pause"]').attr('disabled')) {
 		$instant_mix = $('li[data-type="rd"]').click();
 		setTimeout(function() {

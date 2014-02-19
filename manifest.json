@@ -66,6 +66,12 @@
     },
     "thumbDown": {
       "description": "Thumbs down"
+    },
+    "shuffle": {
+      "description": "Shuffle songs"
+    },
+    "repeat": {
+      "description": "Repeat songs"
     }
   }
 }

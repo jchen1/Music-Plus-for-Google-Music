@@ -48,41 +48,51 @@ body {
 	font-weight:bold;
 }
 
-#playPause.goog-flat-button {
-	background: no-repeat url(../images/sprites.png) -622px -228px
-}
+		#playPause.goog-flat-button {
+			background: no-repeat url(images/sprites.png) -2443px -562px;
+			background-size: 3079px 727px;
+		}
 
-#playPause.goog-flat-button:hover {
-	background: no-repeat url(../images/sprites.png) -84px -174px
-}
+		#playPause.goog-flat-button:hover {
+			background: no-repeat url(images/sprites.png) -2443px -562px;
+			background-size: 3079px 727px;
+		}
 
-#playPause.goog-flat-button-checked {
-	background: no-repeat url(../images/sprites.png) -300px -132px;
-}
+		#playPause.goog-flat-button-checked {
+			background: no-repeat url(images/sprites.png) -2860px -50px;
+			background-size: 3079px 727px;
+		}
 
-#playPause.goog-flat-button-checked:hover {
-	background: no-repeat url(../images/sprites.png) -581px -428px;
-}
+		#playPause.goog-flat-button-checked:hover {
+			background: no-repeat url(images/sprites.png) -2860px -50px;
+			background-size: 3079px 727px;
+		}
 
-#playPause.goog-flat-button-checked {
-background: no-repeat url(../images/sprites.png) -300px -132px;
-}
+		#playPause.goog-flat-button-checked {
+			background: no-repeat url(images/sprites.png) -2860px -50px;
+			background-size: 3079px 727px;
+		}
 
-#rew.goog-flat-button {
-	background: no-repeat url(../images/sprites.png) -226px -337px;
-}
+		#rew.goog-flat-button {
+			background: no-repeat url(images/sprites.png) 0 -513px;
+			background-size: 3079px 727px;
+		}
 
-#rew.goog-flat-button:hover {
-	background: no-repeat url(../images/sprites.png) -300px -428px;
-}
+		#rew.goog-flat-button:hover {
+			background: no-repeat url(images/sprites.png) 0 -513px;
+			background-size: 3079px 727px;
+		}
 
-#ff.goog-flat-button {
-	background: no-repeat url(../images/sprites.png) -96px -116px;
-}
+		#ff.goog-flat-button {
+			background: no-repeat url(images/sprites.png) -2128px -463px;
+			background-size: 3079px 727px;
+		}
 
-#ff.goog-flat-button:hover {
-	background: no-repeat url(../images/sprites.png) -574px -292px;
-}
+		#ff.goog-flat-button:hover {
+			background: no-repeat url(images/sprites.png) -2128px -463px;
+			background-size: 3079px 727px;
+		}
+
 
 .goog-flat-button {
 	width: 43px;

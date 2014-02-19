@@ -6,7 +6,7 @@
 	<style>
 		#popup {
 			width:415px;
-			height:218px;
+			height:228px;
 			margin:0;
 			padding:0;
 		/*	background:#666;*/
@@ -18,6 +18,7 @@
 			min-height:160px;
 			font-family: 'Roboto',arial,sans-serif;
 			padding:35px 30px 22px 10px;
+			background-color: #e5e5e5;
 		/*	background:#666;*/
 			position:absolute;
 			top:0;
@@ -48,55 +49,61 @@
 		}
 
 		#playPause.goog-flat-button {
-			background: no-repeat url(images/sprites.png) -622px -228px
+			background: no-repeat url(images/sprites.png) -2443px -562px;
+			background-size: 3079px 727px;
 		}
 
 		#playPause.goog-flat-button:hover {
-			background: no-repeat url(images/sprites.png) -84px -174px
+			background-color: #e8e8e8;
 		}
 
 		#playPause.goog-flat-button-checked {
-			background: no-repeat url(images/sprites.png) -300px -132px;
+			background: no-repeat url(images/sprites.png) -2860px -50px;
+			background-size: 3079px 727px;
 		}
 
 		#playPause.goog-flat-button-checked:hover {
-			background: no-repeat url(images/sprites.png) -581px -428px;
-		}
-
-		#playPause.goog-flat-button-checked {
-		background: no-repeat url(images/sprites.png) -300px -132px;
+			background-color: #e8e8e8;
 		}
 
 		#rew.goog-flat-button {
-			background: no-repeat url(images/sprites.png) -226px -337px;
+			background: no-repeat url(images/sprites.png) 0 -513px;
+			background-size: 3079px 727px;
 		}
 
 		#rew.goog-flat-button:hover {
-			background: no-repeat url(images/sprites.png) -300px -428px;
+			background-color: #e8e8e8;
 		}
 
 		#ff.goog-flat-button {
-			background: no-repeat url(images/sprites.png) -96px -116px;
+			background: no-repeat url(images/sprites.png) -2128px -463px;
+			background-size: 3079px 727px;
 		}
 
 		#ff.goog-flat-button:hover {
-			background: no-repeat url(images/sprites.png) -574px -292px;
+			background-color: #e8e8e8;
 		}
 
+
 		.goog-flat-button {
-			width: 43px;
-			height: 48px;
+			width: 62px;
+			height: 53px;
 			outline: none;
 			margin: -1px 0 0 6px;
 			cursor: pointer;
 			float: left;
+
+			-webkit-transition: background-color .218s;
+			-moz-transition: background-color .218s;
+			-o-transition: background-color .218s;
+			-transition: background-color .218s;
 		}
 
 		#controls {
 			position:absolute;
-			bottom:0px;
+			bottom:-10px;
 			left:0px;
-			background: url("images/bg_now_playing_bar_pattern.png") repeat-x;
+			background-color: #fafafa;
 			width: 415px;
 			height: 45px;
 			outline: none;
@@ -116,7 +123,7 @@
 		}
 
 		#played_slider {
-			background-color: white;
+			background-color: #fd8500;
 			width: 0;
 			height: 2px;
 			padding-left: 1em;
@@ -132,20 +139,15 @@
 		}
 
 		.goog-slider-track .goog-slider-thumb {
-			background: no-repeat url(images/sprites.png) -642px -296px;
-		}
-		/*.goog-slider-track .goog-slider-thumb:hover {
-			background: no-repeat url(images/sprites.png) -250px 0;
-		}
-		*/
-		.goog-slider-track .goog-slider-thumb {
-			background: no-repeat url(images/sprites.png) -642px -296px;
+			background: no-repeat url(images/sprites.png) -2862px -476px;
+			background-size: 3079px 727px;
 		}
 
 		.goog-slider-thumb {
-			width: 14px;
-			height: 14px;
-			margin-top:-8px;
+			width: 12px;
+			height: 12px;
+			margin-top:-6px;
+			margin-left: 5px;
 			position:relative;
 		}
 		.playing-progress-background {
@@ -171,9 +173,9 @@
 
 		#time_and_slider {
 			position:absolute;
-			right:20px;
-			left:172px;
-			bottom:3px;
+			right:0px;
+			left:0px;
+			bottom:10px;
 			z-index:1000;
 		}
 
@@ -265,9 +267,10 @@
 		}
 
 		.breadcrumb-part {
-			background: no-repeat url(images/sprites.png) -492px -360px;
-			width: 41px;
-			height: 24px;
+			background: no-repeat url(images/sprites.png) -306px -1372px;
+			background-color: #fb8521;
+			width: 32px;
+			height: 32px;
 			float: left;
 			cursor: pointer;
 		}
@@ -277,12 +280,12 @@
 		}
 
 		.tab-text {
-			line-height: 27px;
+			line-height: 32px;
 			padding: 0 10px;
-			border-bottom: 24px solid #4C4C4C;
+			border-bottom: 32px solid #4C4C4C;
 			border-right: 24px solid transparent;
 			color: white;
-			font-size: 12px;
+			font-size: 15px;
 			font-weight: 600;
 			height: 0;
 			cursor: default;
@@ -313,11 +316,6 @@
 </head>
 <body>
 	<div id="popup">
-		<div id="nav_buttons" role="button">
-			<div class="breadcrumb-part"></div>
-			<span class="tab-text">Now Playing</span>
-			<input type="text" value="Filter" id="search" style="display:none;" />
-		</div>
 		<div id="loadingOverlay" style="display: none;" class="regularLoadingOverlay"></div>
 		<div id="close_nav" style="display:none;" title="Click to close navigation">X</div>
 		<div id="navigate" style="display:none;">
@@ -330,7 +328,6 @@
 			<div id="album_art" class="big_art">
 				<img id="album_art_img" src="http://play.google.com/music/default_album_med.png" height="128" width="128" />
 			</div>
-			<div id="song_indicator" class="paused-indicator"></div>
 			<div id="song_info">
 				<div id="song_title"></div>
 				<div id="artist"></div>

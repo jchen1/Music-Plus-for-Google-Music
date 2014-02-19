@@ -81,12 +81,12 @@
     }
 
     function set_slider(current_time, total_time) {
-      var total_width = 223;
+      var total_width = 450;
       var total_secs = (parseInt(total_time.split(":")[0]) * 60) + parseInt(total_time.split(":")[1]);
       var current_secs = (parseInt(current_time.split(":")[0]) * 60) + parseInt(current_time.split(":")[1]);
       var width = Math.round((current_secs/total_secs) * total_width);
-      $('#played_slider').attr('style', 'width:' + (width - 2) + 'px;');
-      $('.goog-slider-thumb').attr('style', 'left:' + (width) + 'px;');
+      $('#played_slider').attr('style', 'width:' + Math.max(0, (width - 19)) + 'px;');
+      $('.goog-slider-thumb').attr('style', 'left:' + Math.max(2, (width - 17)) + 'px;');
       $('.goog-slider-thumb').show();
     }
 

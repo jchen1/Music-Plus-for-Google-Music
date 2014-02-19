@@ -50,9 +50,9 @@
               $("#song_title").html(response.song_title);
               $("#artist").html(response.artist);
               $("#album").html(response.album);
-              if (response.album_art.split('default_album_med').length > 1 || response.album_art == 'http://undefined') {
-                response.album_art = 'http://play.google.com/music/default_album_med.png';
-              }
+              //if (response.album_art.split('default_album_med').length > 1 || response.album_art == 'http://undefined') {
+                //response.album_art = 'http://play.google.com/music/default_album_med.png';
+              //}
               // console.log('response.status: ' + response.status);
               if (response.status == 'Play') {
                 toggle_play('paused');
@@ -60,12 +60,14 @@
               else if (response.status == 'Pause') {
                 toggle_play('playing');
               }
-              toggle_thumb(response.thumb_status);
 
               $("#album_art_img").attr('src', response.album_art);
               $("#current_time").html(response.current_time);
               $("#total_time").html(response.total_time);
               set_slider(response.current_time, response.total_time);
+              toggle_thumb(response.thumb_status);
+              toggle_repeat(response.repeat_status);
+              toggle_shuffle(reponse.shuffle_status);
               // chrome.browserAction.setIcon({ path: response.album_art }); // Cool in theory, but button a little too small
             }
           }
@@ -352,6 +354,16 @@ $(function() {
     $('#down')
       .on('click', function() {
         player_action('thumbDown');
+      });
+
+    $('#shuffle')
+      .on('click', function() {
+        player_action('shuffle');
+      });
+
+    $('#repeat')
+      .on('click', function() {
+        player_action('repeat');
       });
 
     $('.breadcrumb-part')

@@ -228,7 +228,7 @@ function set_popup(data, callback) {
 	// consoleLog(Track.status);
 	callback({'song_title': Track.song_title, 'artist' : Track.artist, 
 						'album_art' : Track.album_art, 'current_time' : Track.current_time, 
-						'total_time' : Track.total_time, 'status' : Track.status});
+						'total_time' : Track.total_time, 'status' : Track.status, 'thumb_status' : Track.thumb_status});
 }
 
 

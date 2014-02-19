@@ -10,6 +10,54 @@ function player_action(type) {
 	else if (type == 'playPause' && $("#playPause").attr('title') == "Pause") {
 		toggle_play('paused');
 	}
+
+	if (type == 'thumbUp' && $("#up").hasClass("thumb-checked")) {
+		$('#up').removeClass('thumb-checked');
+	}
+
+	else if (type == 'thumbUp') {
+		$('#up').addClass('thumb-checked');
+		if ($('#down').hasClass("thumb-checked")) {
+			$('#down').removeClass("thumb-checked");
+		}
+	}
+
+	if (type == 'thumbDown' && $('#down').hasClass('thumb-checked')) {
+		$('#down').removeClass('thumb-checked');
+	}
+	else if (type == 'thumbDown') {
+		$('#down').addClass('thumb-checked');
+		if ($('#up').hasClass('thumb-checked')) {
+			$('#up').removeClass('thumb-checked');
+		}
+	}
+}
+
+function toggle_thumb(status) {
+	if (status == 'None') {
+		if ($('#down').hasClass('thumb-checked')) {
+			$('#down').removeClass('thumb-checked');
+		}
+		if ($('#up').hasClass('thumb-checked')) {
+			$('#up').removeClass('thumb-checked');
+		}
+	}
+	else if (status == 'Up') {
+		if ($('#down').hasClass('thumb-checked')) {
+			$('#down').removeClass('thumb-checked');
+		}
+		if (!($('#up').hasClass('thumb-checked'))) {
+			$('#up').addClass('thumb-checked');
+		}
+	}
+	else if (status == 'Down') {
+		if (!($('#down').hasClass('thumb-checked'))) {
+			$('#down').addClass('thumb-checked');
+		}
+		if ($('#up').hasClass('thumb-checked')) {
+			$('#up').removeClass('thumb-checked');
+		}
+	}
 }
 
 function toggle_play(status) {

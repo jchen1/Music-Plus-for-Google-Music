@@ -41,11 +41,11 @@
                   return false;
               });
               // chrome.tabs.create({url: "http://play.google.com/"});
-              console.log('there was an error connecting to the tab');
+              //console.log('there was an error connecting to the tab');
               // window.close();
             }
             else {
-              // console.log("response is back " + response.song_title);
+               //console.log("response is back " + response.song_title);
               // $("#popup").html(response.artist + " - " + response.song_title + " " + response.album_art);
               $("#song_title").html(response.song_title);
               $("#artist").html(response.artist);
@@ -59,6 +59,8 @@
               else if (response.status == 'Pause') {
                 toggle_play('playing');
               }
+              toggle_thumb(response.thumb_status);
+
               $("#album_art_img").attr('src', response.album_art);
               $("#current_time").html(response.current_time);
               $("#total_time").html(response.total_time);
@@ -339,6 +341,16 @@ $(function() {
     $('#ff')
       .on('click', function() {
         player_action('nextSong');
+      });
+
+    $('#up')
+      .on('click', function() {
+        player_action('thumbUp');
+      });
+
+    $('#down')
+      .on('click', function() {
+        player_action('thumbDown');
       });
 
     $('.breadcrumb-part')

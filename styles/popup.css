@@ -302,7 +302,7 @@ body {
 .playing-progress-background {
 	background-color: #eaeaea;
 	height: 3px;
-	box-shadow: 0px -2px 5px #999999;
+	box-shadow: 0px -2px 2px #bbbbbb;
 }
 
 .playing-indicator {

@@ -14,7 +14,6 @@
       "css": ["styles/mystyles.css"],
       "js": [
                "scripts/jquery-2.0.js",
-               "scripts/jquery.hotkeys.js",
                "scripts/contentChange.js",
                "scripts/track.js",
                "scripts/lyrics.js",

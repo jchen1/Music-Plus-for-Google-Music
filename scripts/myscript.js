@@ -226,7 +226,7 @@ function scrobble() {
 function set_popup(data, callback) {
 	Track.now_playing();
 	// consoleLog(Track.status);
-	callback({'song_title': Track.song_title, 'artist' : Track.artist, 
+	callback({'song_title': Track.song_title, 'artist' : Track.artist, 'album' : Track.album,
 						'album_art' : Track.album_art, 'current_time' : Track.current_time, 
 						'total_time' : Track.total_time, 'status' : Track.status, 'thumb_status' : Track.thumb_status});
 }

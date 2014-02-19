@@ -49,6 +49,7 @@
               // $("#popup").html(response.artist + " - " + response.song_title + " " + response.album_art);
               $("#song_title").html(response.song_title);
               $("#artist").html(response.artist);
+              $("#album").html(response.album);
               if (response.album_art.split('default_album_med').length > 1 || response.album_art == 'http://undefined') {
                 response.album_art = 'http://play.google.com/music/default_album_med.png';
               }

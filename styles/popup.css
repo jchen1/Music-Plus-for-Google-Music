@@ -10,7 +10,7 @@
 #player {
 	min-width:375px;
 	min-height:160px;
-	font-family: 'Proxima Nova',arial,sans-serif;
+	font-family: 'Roboto',arial,sans-serif;
 	padding:35px 30px 22px 10px;
 /*	background:#666;*/
 	position:absolute;
@@ -20,7 +20,7 @@ body {
 	margin:0;
 	padding:0;
 	-webkit-border-radius: 20px;
-	font-family: 'Proxima Nova',arial,sans-serif;
+	font-family: 'Roboto',arial,sans-serif;
 	overflow:hidden;
 }
 

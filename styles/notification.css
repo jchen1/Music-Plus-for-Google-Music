@@ -15,7 +15,7 @@ html, body {
 */	margin:0;
 	padding:0;
 /*	background:#666;*/
-/*	-webkit-border-radius: 20px;*/
+/*	border-radius: 20px;*/
 }
 
 #player {
@@ -28,7 +28,7 @@ html, body {
 body {
 	margin:0;
 	padding:0;
-	-webkit-border-radius: 20px;
+	border-radius: 20px;
 	font-family: 'Roboto',arial,sans-serif;
 }
 

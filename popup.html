@@ -62,7 +62,7 @@
 		}
 
 		#playPause.goog-flat-button:active {
-			#background-color: #d5d5d5;
+			background-color: #d5d5d5;
 		}
 
 		#playPause.goog-flat-button-checked {
@@ -75,7 +75,7 @@
 		}
 
 		#playPause.goog-flat-button-checked:active {
-			#background-color: #d5d5d5;
+			background-color: #d5d5d5;
 		}
 
 		#rew.goog-flat-button {
@@ -88,7 +88,7 @@
 		}
 
 		#rew.goog-flat-button:active {
-			#background-color: #d5d5d5;
+			background-color: #d5d5d5;
 		}
 
 		#ff.goog-flat-button {
@@ -101,7 +101,7 @@
 		}
 
 		#ff.goog-flat-button:active {
-			#background-color: #d5d5d5;
+			background-color: #d5d5d5;
 		}
 
 		.goog-flat-button {
@@ -109,10 +109,67 @@
 			height: 53px;
 			outline: none;
 			margin: -1px 0 0 6px;
-			cursor: pointer;
 			float: left;
+			opacity: 0.8;
 
-			-transition: background-color .218s;
+			transition: background-color .218s;
+		}
+
+		.thumb {
+			width: 53px;
+			height: 53px;
+			outline: none;
+			float: right;
+
+			transition: background-color .218s;
+		}
+
+		#up.thumb {
+			background: no-repeat url(images/sprites2.png) -1018px -1882px;
+		}
+
+		#up.thumb-checked {
+			background: no-repeat url(images/sprites2.png) -248px -430px;
+		}
+
+		#up.thumb:hover {
+			background-color: #e8e8e8;
+		}
+
+		#up.thumb-checked:hover {
+			background-color: #e8e8e8;
+		}
+
+		#up.thumb:active {
+			background-color: #d5d5d5;
+		}
+
+		#up.thumb-checked:hover {
+			background-color: #e8e8e8;
+		}
+
+		#down.thumb {
+			background: no-repeat url(images/sprites2.png) -2608px -2624px;
+		}
+
+		#down.thumb-checked {
+			background: no-repeat url(images/sprites2.png) -226px -1968px;
+		}
+
+		#down.thumb:hover {
+			background-color: #e8e8e8;
+		}
+
+		#down.thumb:active {
+			background-color: #d5d5d5;
+		}
+
+		#down.thumb-checked:hover {
+			background-color: #e8e8e8;
+		}
+
+		#down.thumb-checked:active {
+			background-color: #d5d5d5;
 		}
 
 		#controls {
@@ -360,6 +417,10 @@
 				<div id="rew" class="goog-flat-button goog-inline-block" title="Previous song" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
 				<div id="playPause" class="goog-flat-button goog-inline-block" title="Play" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
 				<div id="ff" class="goog-flat-button goog-inline-block" title="Next song" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
+
+				<div id="down" class="thumb" title="Thumbs up" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
+				<div id="up" class="thumb" title="Thumbs down" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
+
 			</div>
 		</div>
 

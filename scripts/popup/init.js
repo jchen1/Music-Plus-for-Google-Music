@@ -41,11 +41,11 @@
                   return false;
               });
               // chrome.tabs.create({url: "http://play.google.com/"});
-              console.log('there was an error connecting to the tab');
+              //console.log('there was an error connecting to the tab');
               // window.close();
             }
             else {
-               console.log("response is back " + response.song_title);
+               //console.log("response is back " + response.song_title);
               // $("#popup").html(response.artist + " - " + response.song_title + " " + response.album_art);
               $("#song_title").html(response.song_title);
               $("#artist").html(response.artist);

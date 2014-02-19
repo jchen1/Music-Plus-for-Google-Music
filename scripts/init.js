@@ -119,15 +119,7 @@ function onRequest(request, sender, callback) {
 chrome.extension.onRequest.addListener(onRequest);
 chrome.commands.onCommand.addListener(function(command) {
   if (localStorage['shortcuts'] == 'true') {
-    if (command == "toggle-play") {
-      player_action('playPause');
-    }
-    else if (command == "next-song") {
-      player_action('nextSong');
-    }
-    else if (command == "prev-song") {
-      player_action('prevSong');
-    }
+    player_action(command);
   }
 });
 

@@ -5,7 +5,7 @@
 	<script src='scripts/popup/init.js'></script>
 	<style>
 		#popup {
-			width:415px;
+			width:450px;
 			height:209px;
 			margin:0;
 			padding:0;
@@ -15,6 +15,7 @@
 
 		#player {
 			min-width:375px;
+			width: 450px;
 			min-height:160px;
 			font-family: 'Roboto',arial,sans-serif;
 			padding:11px 30px 22px 10px;
@@ -124,6 +125,81 @@
 			transition: background-color .218s;
 		}
 
+		#repeat.thumb {
+			float: left;
+			background: no-repeat url(images/sprites.png) -2056px -25px;
+			background-size: 3079px 727px;
+			opacity: 0.8;
+		}
+
+		#repeat.thumb:hover {
+			background-color: #e8e8e8;
+		}
+
+		#repeat.thumb:active {
+			background-color: #d5d5d5;
+		}
+
+		#repeat.thumb-list {
+			float: left;
+			opacity: 0.8;
+			background: no-repeat url(images/sprites.png) -691px -27px;
+			background-size: 3079px 727px;
+		}
+
+		#repeat.thumb-list:hover {
+			background-color: #e8e8e8;
+		}
+
+		#repeat.thumb-list:active {
+			background-color: #d5d5d5;
+		}
+
+		#repeat.thumb-single {
+			float: left;
+			opacity: 0.8;
+			background: no-repeat url(images/sprites.png) -1354px -266px;
+			background-size: 3079px 727px;
+		}
+
+		#repeat.thumb-single:hover {
+			background-color: #e8e8e8;
+		}
+
+		#repeat.thumb-single:active {
+			background-color: #d5d5d5;
+		}
+
+		#shuffle.thumb {
+			float: left;
+			opacity: 0.8;
+			background: no-repeat url(images/sprites.png) -1503px -369px;
+			background-size: 3079px 727px;
+		}
+
+		#shuffle.thumb:hover {
+			background-color: #e8e8e8;
+		}
+
+		#shuffle.thumb:active {
+			background-color: #d5d5d5;
+		}
+
+		#shuffle.thumb-checked {
+			float: left;
+			opacity: 0.8;
+			background: no-repeat url(images/sprites.png) -1603px 0;
+			background-size: 3079px 727px;
+		}
+
+		#shuffle.thumb-checked:hover {
+			background-color: #e8e8e8;
+		}
+
+		#shuffle.thumb-checked:active {
+			background-color: #d5d5d5;
+		}
+
 		#up.thumb {
 			background: no-repeat url(images/sprites.png) -1300px -266px;
 			background-size: 3079px 727px;
@@ -181,7 +257,7 @@
 			bottom:-15px;
 			left:0px;
 			background-color: #fafafa;
-			width: 415px;
+			width: 450px;
 			height: 50px;
 			outline: none;
 			z-index:1;
@@ -192,7 +268,7 @@
 			line-height: 20px;
 			color: #7f7f7f;
 			text-align: right;
-			margin-right: 10px;
+			margin-right: 55px;
 			position: relative;
 			top: 23px;
 		}
@@ -274,7 +350,7 @@
 		#navigate {
 			height:147px;
 			background:white;
-			width:415px;
+			width:450px;
 			overflow-y:auto;
 			overflow-x:none;
 			position:absolute;
@@ -420,12 +496,14 @@
 				</div>
 			</div>
 			<div id="controls">
+				<div id="repeat" class="thumb" title="Repeat songs" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
 				<div id="rew" class="goog-flat-button goog-inline-block" title="Previous song" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
 				<div id="playPause" class="goog-flat-button goog-inline-block" title="Play" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
 				<div id="ff" class="goog-flat-button goog-inline-block" title="Next song" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
+				<div id="shuffle" class="thumb" title="Shuffle songs" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
 
-				<div id="down" class="thumb" title="Thumbs up" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
-				<div id="up" class="thumb" title="Thumbs down" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
+				<div id="down" class="thumb" title="Thumbs down" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
+				<div id="up" class="thumb" title="Thumbs up" role="button" style="-webkit-user-select: none; " aria-disabled="false" aria-pressed="false"></div>
 
 			</div>
 		</div>

@@ -31,32 +31,66 @@ function player_action(type) {
 			$('#up').removeClass('thumb-checked');
 		}
 	}
+
+	if (type == 'repeat') {
+		if ($("#repeat").hasClass('thumb-list')) {
+			toggle_repeat('single');
+		}
+		else if ($("#repeat").hasClass('thumb-single')) {
+			toggle_repeat('none');
+		}
+		else {
+			toggle_repeat('list');
+		}
+	}
+
+	if (type == 'shuffle') {
+		if ($("#shuffle").hasClass('thumb-checked')) {
+			toggle_shuffle('off');
+		}
+		else {
+			toggle_shuffle('on');
+		}
+	}
+}
+
+function toggle_repeat(status) {
+	//console.log(status);
+	if (status == 'single') {
+		$("#repeat").addClass('thumb-single');
+		$("#repeat").removeClass('thumb-list');
+	}
+	else if (status == 'list') {
+		$("#repeat").addClass('thumb-list');
+		$("#repeat").removeClass('thumb-single');
+	}
+	else if (status == 'none') {
+		$("#repeat").removeClass('thumb-single');
+		$("#repeat").removeClass('thumb-list');
+	}
+}
+
+function toggle_shuffle(status) {
+	if (status == 'off') {
+		$("#shuffle").removeClass('thumb-checked');
+	}
+	if (status == 'on') {
+		$("#shuffle").addClass('thumb-checked');
+	}
 }
 
 function toggle_thumb(status) {
 	if (status == 'None') {
-		if ($('#down').hasClass('thumb-checked')) {
-			$('#down').removeClass('thumb-checked');
-		}
-		if ($('#up').hasClass('thumb-checked')) {
-			$('#up').removeClass('thumb-checked');
-		}
+		$('#down').removeClass('thumb-checked');
+		$('#up').removeClass('thumb-checked');
 	}
 	else if (status == 'Up') {
-		if ($('#down').hasClass('thumb-checked')) {
-			$('#down').removeClass('thumb-checked');
-		}
-		if (!($('#up').hasClass('thumb-checked'))) {
-			$('#up').addClass('thumb-checked');
-		}
+		$('#down').removeClass('thumb-checked');
+		$('#up').addClass('thumb-checked');
 	}
 	else if (status == 'Down') {
-		if (!($('#down').hasClass('thumb-checked'))) {
-			$('#down').addClass('thumb-checked');
-		}
-		if ($('#up').hasClass('thumb-checked')) {
-			$('#up').removeClass('thumb-checked');
-		}
+		$('#down').addClass('thumb-checked');
+		$('#up').removeClass('thumb-checked');
 	}
 }
 

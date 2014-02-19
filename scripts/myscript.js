@@ -228,7 +228,8 @@ function set_popup(data, callback) {
 	// consoleLog(Track.status);
 	callback({'song_title': Track.song_title, 'artist' : Track.artist, 'album' : Track.album,
 						'album_art' : Track.album_art, 'current_time' : Track.current_time, 
-						'total_time' : Track.total_time, 'status' : Track.status, 'thumb_status' : Track.thumb_status});
+						'total_time' : Track.total_time, 'status' : Track.status, 'thumb_status' : Track.thumb_status, 
+						'shuffle_status' : Track.shuffle_status, 'repeat_status' : Track.repeat_status});
 }
 
 
@@ -423,6 +424,12 @@ function playback_action(type, callback) {
 	}
 	else if (type == 'thumbDown') {
 		$button = $('li[title="Thumbs down"]');
+	}
+	else if (type == 'shuffle') {
+		$button = $('button[data-id="shuffle"]');
+	}
+	else if (type == 'repeat') {
+		$button = $('button[data-id="repeat"]');
 	}
 	if ($('button[data-id="play-pause"]').attr('disabled')) {
 		$instant_mix = $('li[data-type="rd"]').click();

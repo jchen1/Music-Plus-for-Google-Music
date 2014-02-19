@@ -6,7 +6,7 @@
 	<style>
 		#popup {
 			width:415px;
-			height:204px;
+			height:209px;
 			margin:0;
 			padding:0;
 		/*	background:#666;*/
@@ -40,12 +40,16 @@
 		}
 
 		#song_title, #artist {
-			color:#666;
-			font-size:15px;
 			margin-bottom:5px;
 		}
 		#song_title {
-			font-weight:bold;
+			color:#333;
+			font-size:20px;
+			font-weight: 300;
+		}
+		#artist {
+			font-size:14px;
+			color: #707070;
 		}
 
 		#playPause.goog-flat-button {
@@ -58,7 +62,7 @@
 		}
 
 		#playPause.goog-flat-button:active {
-			#background-color: d5d5d5;
+			#background-color: #d5d5d5;
 		}
 
 		#playPause.goog-flat-button-checked {
@@ -71,7 +75,7 @@
 		}
 
 		#playPause.goog-flat-button-checked:active {
-			#background-color: d5d5d5;
+			#background-color: #d5d5d5;
 		}
 
 		#rew.goog-flat-button {
@@ -84,7 +88,7 @@
 		}
 
 		#rew.goog-flat-button:active {
-			#background-color: d5d5d5;
+			#background-color: #d5d5d5;
 		}
 
 		#ff.goog-flat-button {
@@ -97,7 +101,7 @@
 		}
 
 		#ff.goog-flat-button:active {
-			#background-color: d5d5d5;
+			#background-color: #d5d5d5;
 		}
 
 		.goog-flat-button {
@@ -108,19 +112,16 @@
 			cursor: pointer;
 			float: left;
 
-			-webkit-transition: background-color .218s;
-			-moz-transition: background-color .218s;
-			-o-transition: background-color .218s;
 			-transition: background-color .218s;
 		}
 
 		#controls {
 			position:absolute;
-			bottom:-10px;
+			bottom:-15px;
 			left:0px;
 			background-color: #fafafa;
 			width: 415px;
-			height: 45px;
+			height: 50px;
 			outline: none;
 			z-index:1;
 		}

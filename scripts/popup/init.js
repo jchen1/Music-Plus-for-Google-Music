@@ -67,7 +67,7 @@
               set_slider(response.current_time, response.total_time);
               toggle_thumb(response.thumb_status);
               toggle_repeat(response.repeat_status);
-              toggle_shuffle(reponse.shuffle_status);
+              toggle_shuffle(response.shuffle_status);
               // chrome.browserAction.setIcon({ path: response.album_art }); // Cool in theory, but button a little too small
             }
           }
